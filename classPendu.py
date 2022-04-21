@@ -4,7 +4,7 @@ class Pendu():
 	def __init__(self):
 		self.mot = Mot()
 		self.mot.mot = self.mot.choisir()
-		print(self.mot.mot)
+#		print(self.mot.mot)
 		self.mot_cache = '_' * len(self.mot.mot)
 		self.nb_essais = 0
 		self.gagne = False
@@ -15,7 +15,7 @@ class Pendu():
 			for i in range(len(self.mot.mot)):
 				if self.mot.mot[i] == lettre:
 					self.mot_cache = self.mot_cache[:i] + lettre + self.mot_cache[i+1:]
-					print(self.mot_cache)
+#					print(self.mot_cache)
 			self.trouver(self.mot_cache)
 		else:
 			print('Erreur de saisie')
